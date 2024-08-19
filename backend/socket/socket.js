@@ -1,11 +1,11 @@
 import { Server } from "socket.io";
-import http from "http";
+import http from "http";// from nodejs
 import express from "express";
 
 const app = express();
 
-const server = http.createServer(app);
-const io = new Server(server, {
+const server = http.createServer(app);// this is our express server.
+const io = new Server(server, {// on te top of the express server we have this socket io server.
 	cors: {
 		origin: ["http://localhost:3000"],
 		methods: ["GET", "POST"],
@@ -16,7 +16,7 @@ export const getReceiverSocketId = (receiverId) => {
 	return userSocketMap[receiverId];
 };
 
-const userSocketMap = {}; // {userId: socketId}
+const userSocketMap = {}; // {userId: socketId}// to get all the online users.
 
 io.on("connection", (socket) => {
 	console.log("a user connected", socket.id);
@@ -30,7 +30,7 @@ io.on("connection", (socket) => {
 	// socket.on() is used to listen to the events. can be used both on client and server side
 	socket.on("disconnect", () => {
 		console.log("user disconnected", socket.id);
-		delete userSocketMap[userId];
+		delete userSocketMap[userId];// when the user disconnects , its socket id will remove the socketMAP
 		io.emit("getOnlineUsers", Object.keys(userSocketMap));
 	});
 });

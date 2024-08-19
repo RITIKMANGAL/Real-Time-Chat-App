@@ -22,7 +22,7 @@ const useLogin = () => {
 				throw new Error(data.error);
 			}
 
-			localStorage.setItem("chat-user", JSON.stringify(data));
+			localStorage.setItem("chat-user", JSON.stringify(data));// if the login user exist in the data base and passses all the checks fron the backend.
 			setAuthUser(data);
 		} catch (error) {
 			toast.error(error.message);

@@ -4,7 +4,7 @@ export const AuthContext = createContext();
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAuthContext = () => {
-	return useContext(AuthContext);
+	return useContext(AuthContext); //  to use the context anywhere we want across teh component tree.
 };
 
 export const AuthContextProvider = ({ children }) => {

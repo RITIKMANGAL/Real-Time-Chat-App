@@ -11,7 +11,7 @@ const Message = ({ message }) => {
 	const profilePic = fromMe ? authUser.profilePic : selectedConversation?.profilePic;
 	const bubbleBgColor = fromMe ? "bg-blue-500" : "";
 
-	const shakeClass = message.shouldShake ? "shake" : "";
+	const shakeClass = message.shouldShake ? "shake" : "";// for incoming messages in real time.
 
 	return (
 		<div className={`chat ${chatClassName}`}>

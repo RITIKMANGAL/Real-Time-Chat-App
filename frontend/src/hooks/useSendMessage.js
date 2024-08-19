@@ -4,12 +4,12 @@ import toast from "react-hot-toast";
 
 const useSendMessage = () => {
 	const [loading, setLoading] = useState(false);
-	const { messages, setMessages, selectedConversation } = useConversation();
+	const { messages, setMessages, selectedConversation } = useConversation();// messages is an array of all messsage.
 
 	const sendMessage = async (message) => {
 		setLoading(true);
 		try {
-			const res = await fetch(`/api/messages/send/${selectedConversation._id}`, {
+			const res = await fetch(`/api/messages/send/${selectedConversation._id}`, {// here selected conversation_id will got to  the bakend.
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",

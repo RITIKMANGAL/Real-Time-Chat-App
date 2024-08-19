@@ -1,9 +1,12 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-	theme: {
-		extend: {},
-	},
-	// eslint-disable-next-line no-undef
-	plugins: [require("daisyui")],
-};
+// tailwind.config.js
+module.exports = {
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}', // Ensure this matches your project's structure
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [
+    require('daisyui'),
+  ],
+}
