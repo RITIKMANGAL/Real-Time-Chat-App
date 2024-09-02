@@ -54,7 +54,7 @@ This project is designed to offer a full-fledged chat platform with the followin
 
 ### Frontend
 
-- Built with **React.js** and **Next.js** for a dynamic, responsive UI.
+- Built with **React.js** for a dynamic, responsive UI.
 - **Tailwind CSS** and **Daisy UI** provide a modern and consistent design.
 - Utilizes **Socket.io** for real-time updates.
 
@@ -89,14 +89,3 @@ To run this project locally, follow these steps:
 4. **Open your browser:**
    Navigate to `http://localhost:3000` to see the app in action.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to open an issue or submit a pull request for any improvements or feature additions.
-
-## 📝 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Replace `your-deployment-link` with the actual URL where your app is deployed. Feel free to add or customize sections to better fit your project's unique features.
